@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawercontenedor"
+    tools:context=".inicio_java">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/pantallatoolbar_superior" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/color_degrade">
+
+            <ImageView
+                android:id="@+id/imagen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="150dp"
+                app:srcCompat="@drawable/planet"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/color_degrade">
+
+
+
+                    <LinearLayout
+                        android:id="@+id/inicioscroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/texthome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="Proyecto RenovaVIDA Conservacion del medio ambiente"
+                            android:textAllCaps="true"
+                            android:textColor="#1A1C1A"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"/>
+
+                        <Button
+                            android:id="@+id/btnhome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/drawer_borde"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Generando impacto positivo de la siembra de arboles"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"/>
+
+                        <ImageView
+                            android:id="@+id/imagen0"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="50dp"
+                            app:srcCompat="@drawable/fondo"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/finalscroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="500dp"
+                        android:orientation="vertical"
+
+                        >
+
+
+                        <TextView
+                            android:id="@+id/texthome2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="Reducir la degracion de bosques - Aumento de la siembra se arboles"
+                            android:textAllCaps="true"
+                            android:textColor="@color/verde_azul"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/texthome3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:text="@string/parrafo"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/texthome4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/parrafo2"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            />
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/gridlayout"
+                            android:rowCount="3"
+                            android:columnCount="2"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="80dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview"
+                                android:layout_width="135dp"
+                                android:layout_height="180dp"
+                                android:layout_row="0"
+                                android:layout_column="0"
+                                android:layout_margin="8dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_vertical|center_horizontal">
+
+                                    <ImageView
+                                        android:layout_width="90dp"
+                                        android:layout_height="90dp"
+                                        android:src="@drawable/planta" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Preparacion de Terreno"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/verde_oscuro"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview2"
+                                android:layout_width="135dp"
+                                android:layout_height="180dp"
+                                android:layout_row="0"
+                                android:layout_column="1"
+                                android:layout_margin="8dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_gravity="bottom"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_vertical|center_horizontal">
+
+                                    <ImageView
+                                        android:layout_width="90dp"
+                                        android:layout_height="90dp"
+                                        android:src="@drawable/fondo" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Trazado u adecuacion tecnica"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/verde_oscuro"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview3"
+                                android:layout_width="135dp"
+                                android:layout_height="180dp"
+                                android:layout_row="1"
+                                android:layout_column="0"
+                                android:layout_margin="8dp"
+                                android:layout_gravity="bottom"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="10dp"
+
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_vertical|center_horizontal">
+
+                                    <ImageView
+                                        android:layout_width="90dp"
+                                        android:layout_height="90dp"
+                                        android:src="@drawable/planta" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Planteo y ahoyado"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/verde_oscuro"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview4"
+                                android:layout_width="135dp"
+                                android:layout_height="180dp"
+                                android:layout_row="1"
+                                android:layout_column="1"
+                                android:layout_margin="8dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="10dp"
+                                android:layout_marginLeft="40dp"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_vertical|center_horizontal">
+
+                                    <ImageView
+                                        android:layout_width="90dp"
+                                        android:layout_height="90dp"
+                                        android:src="@drawable/planta" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Riego y transporte de materiales"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/verde_oscuro"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview5"
+                                android:layout_width="135dp"
+                                android:layout_height="180dp"
+                                android:layout_row="2"
+                                android:layout_column="0"
+                                android:layout_margin="8dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="10dp"
+                               >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_vertical|center_horizontal">
+
+                                    <ImageView
+                                        android:layout_width="90dp"
+                                        android:layout_height="90dp"
+                                        android:src="@drawable/fondo" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Siembra"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/verde_oscuro"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview6"
+                                android:layout_width="135dp"
+                                android:layout_height="180dp"
+                                android:layout_row="2"
+                                android:layout_column="1"
+                                android:layout_margin="8dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="10dp"
+                                android:layout_marginLeft="40dp"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_vertical|center_horizontal">
+
+                                    <ImageView
+                                        android:layout_width="90dp"
+                                        android:layout_height="90dp"
+                                        android:src="@drawable/planta" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Control de plagas "
+                                        android:textAlignment="center"
+                                        android:textColor="@color/verde_oscuro"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+                        </GridLayout>
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+
+            </ScrollView>
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="start">
+
+    <include
+        layout="@layout/pantalla_menu"/>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

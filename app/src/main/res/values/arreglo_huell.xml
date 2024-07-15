@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_Transporte">
+        <item>seleccione</item>
+        <item>No me movilizo en un medio de Transporte</item>
+        <item>De 30 a 90 Minutos</item>
+        <item>De 60 a 120 Minutos</item>
+        <item>De 120 a 300 Minutos</item>
+        <item>De 300 a 600 Minutos</item>
+        <item>Mas de 600 minutos</item>
+
+    </string-array>
+</resources>

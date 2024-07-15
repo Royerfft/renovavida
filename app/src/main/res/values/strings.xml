@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">appkio</string>
+    <string name="abrirNavegacion">Abrir la navegacion</string>
+    <string name="cerrarNavegacion">Cerrar la navegacion</string>
+    <string name="PantallaInicioSPLASH">Bievenidos RenovaVida</string>
+    <string name="PantallaInicio">INICIA SESION !siembra Un arbol a la vez! </string>
+    <string name="parrafo">Este espacio busca generar informacion confiable, consistente oportuna y de calidad sobre la oferta, estado, presion y dinamica del recurso forestal como soporte a procesos de toma de decisiones a nivel nacional regional y local, e implementar acciones de control y seguimiento que permita una eficiente administracion del recurso forestal del pais.
+        </string>
+    <string name="parrafo2">Estamos convencidos de la importancia de preservar y recuperar dichos espacios naturales mediante la siembra de arboles conservando las caracteristicas del medio y mejorando la posibilidad tanto del agua como de la vida </string>
+</resources>

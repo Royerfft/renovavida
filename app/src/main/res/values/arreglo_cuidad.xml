@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_cuidad">
+        <item>Amazonas</item>
+        <item>Antioquia</item>
+        <item>Arauca</item>
+        <item>Atlantico</item>
+        <item>Bolivar</item>
+        <item>Boyaca</item>
+        <item>Caldas</item>
+        <item>Caqueta</item>
+        <item>Casanare</item>
+        <item>Cauca</item>
+        <item>Cesar</item>
+        <item>Choco</item>
+        <item>Cordoba</item>
+        <item>Cundinamarca</item>
+        <item>Guainia</item>
+        <item>Guaviare</item>
+        <item>Huila</item>
+        <item>La Guajira</item>
+        <item>Magdalena</item>
+        <item>Meta</item>
+        <item>Nariño</item>
+        <item>Norte de Santander</item>
+        <item>Putumayo</item>
+        <item>Quindio</item>
+        <item>Risaralda</item>
+        <item>San Andres y Providencia</item>
+        <item>Santander</item>
+        <item>Sucre</item>
+        <item>Tolima</item>
+        <item>Valle del Cauca</item>
+        <item>Vaupes</item>
+        <item>Vichada</item>
+
+    </string-array>
+</resources>

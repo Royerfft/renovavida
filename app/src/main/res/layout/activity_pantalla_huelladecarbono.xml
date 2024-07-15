@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/carbono"
+    tools:context=".pantalla_huelladecarbono">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/layo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/layo2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:text="Transporte"
+                android:textAlignment="center"
+                android:textSize="34dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:fontFamily="casual"
+                android:text="Cual es el tiempo promedio semanal en el que se desplaza(ya sea en automovil,motocicleta, taxi o bus) IDA Y REGRESO "
+                android:textAlignment="center"
+                android:textSize="24dp" />
+
+            <Spinner
+                android:id="@+id/SpinnerHuella"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:padding="20dp"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/textEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Eligio: "
+                android:textAlignment="center"
+                android:textSize="34dp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/buttonHuella"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:text="Desliza hacia abajo"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layo2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layo1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:text="Transporte"
+                android:textAlignment="center"
+                android:textSize="34dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:fontFamily="casual"
+                android:text=" Cuantos dias a la semana utilizas transporte \n si no lo utilizas marca cer(0) "
+                android:textAlignment="center"
+                android:textSize="24dp" />
+
+            <SeekBar
+                android:id="@+id/seekBarTransp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:max="7"
+                />
+
+            <TextView
+                android:id="@+id/textSeebarTransp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Mide tu huella de carbono"
+                android:textSize="20dp"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/buttonHuellaTran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:onClick="onClick"
+                android:text="Desliza hacia abajo"
+                android:textSize="24dp" />
+
+        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layo3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layo2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:text="HOGAR"
+                    android:textAlignment="center"
+                    android:textSize="34dp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:fontFamily="casual"
+                    android:text=" Cuantas personas viven en tu casa..(Incluyendote) "
+                    android:textAlignment="center"
+                    android:textSize="24dp" />
+
+                <SeekBar
+                    android:id="@+id/seekBarCasa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:max="7"
+                    />
+
+                <TextView
+                    android:id="@+id/textSeebarCasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Mide tu huella de carbono"
+                    android:textSize="20dp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/buttonHuellaCasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:onClick="onClick"
+                    android:text="Desliza hacia abajo"
+                    android:textSize="24dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layo4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layo3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:text="HOGAR"
+                    android:textAlignment="center"
+                    android:textSize="34dp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:fontFamily="casual"
+                    android:text=" Cuantos gramos de carne (Res-Cerdo) o pollo  consumes a la semana(El promedio diario de consumo de una persona es de (125grs) )"
+                    android:textAlignment="center"
+                    android:textSize="24dp" />
+
+                <SeekBar
+                    android:id="@+id/seekBarCarne"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:max="3000"
+                    />
+
+                <TextView
+                    android:id="@+id/textSeebarCarne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Mide tu huella de carbono"
+                    android:textSize="20dp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/buttonHuellaCarne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:onClick="onClick"
+                    android:text="Desliza hacia abajo"
+                    android:textSize="24dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layo5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layo4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:text="HOGAR"
+                    android:textAlignment="center"
+                    android:textSize="34dp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:fontFamily="casual"
+                    android:text=" Cual es tu consumo mesnual de energia en kilowatts... El promedio mensual electrico que consume un hogar es de 157 KW/h"
+                    android:textAlignment="center"
+                    android:textSize="24dp" />
+
+                <SeekBar
+                    android:id="@+id/seekBarEnergia"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:max="1000"
+                    />
+
+                <TextView
+                    android:id="@+id/textSeebarEnergia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Mide tu huella de carbono"
+                    android:textSize="20dp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/buttonHuellaEnergia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:onClick="onClick"
+                    android:text="Desliza hacia abajo"
+                    android:textSize="24dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layo6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layo5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:text="HOGAR"
+                    android:textAlignment="center"
+                    android:textSize="34dp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:fontFamily="casual"
+                    android:text=" Cual es el consumo mensual de gas natural en metros cubicos(aproximar al enetero mas cercano del consumo)"
+                    android:textAlignment="center"
+                    android:textSize="24dp" />
+
+                <SeekBar
+                    android:id="@+id/seekBarGas"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:max="50"
+                    />
+
+                <TextView
+                    android:id="@+id/textSeebarGas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Mide tu huella de carbono"
+                    android:textSize="20dp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/buttonHuellaGas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:drawable/btn_dialog"
+                    android:onClick="onClick"
+                    android:text="Mira tu Resultado"
+                    android:textSize="24dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

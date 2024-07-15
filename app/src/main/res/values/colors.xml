@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="DegradadoColor1">#3A53DD</color>
+    <color name="DegradadoColor2">#A9DDF4</color>
+    <color name="DegradadoColor3">#A2F1FB</color>
+
+
+
+    <color name="verde_claro">#BFADC592</color>
+    <color name="verde_oscuro">#374C21</color>
+    <color name="verde_azul">#238A94</color>
+
+</resources>
