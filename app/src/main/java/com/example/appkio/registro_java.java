@@ -30,10 +30,10 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
     ImageView menu;
     LinearLayout inicio, ajuste, compartir, informacion, salir;
     Button BotonFecha, BotonHora,RegistrarBoton,BotonTerreno;
-    EditText EditFecha, EditHora, Fecha, Hora;
+    EditText EditFecha, EditHora, Fecha, Hora, ingresaNombre;
     private int dia,mes,año,hora,minutos;
     private Spinner spinner1;
-    private TextView textspiner;
+    private TextView textspiner, mostrarElementos;
     private HashMap<String,String> Registro;
 
 
@@ -52,7 +52,8 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
         informacion=findViewById(R.id.informacion);
         salir=findViewById(R.id.salir);
 
-
+        ingresaNombre=findViewById(R.id.IngresaNombre);
+        mostrarElementos=findViewById(R.id.MostrarTodo);
 
         BotonFecha=findViewById(R.id.buttonFecha);
         BotonHora=findViewById(R.id.botonHora);
@@ -64,10 +65,6 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
         textspiner=findViewById(R.id.MostrarTodo);
         Registro = new HashMap<>();
 
-        //PrimerImagCard=findViewById(R.id.cardviewcompra1);
-        //SegundImagCard=findViewById(R.id.cardviewcompra2);
-        //TercerImagCard=findViewById(R.id.cardviewcompra3);
-        //CuartoImagCard=findViewById(R.id.cardviewcompra4);
 
 
         BotonFecha.setOnClickListener(this);
@@ -77,6 +74,20 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
         Hora=findViewById(R.id.editTextHora);
 
         BotonTerreno=findViewById(R.id.BotonTerreno);
+
+        RegistrarBoton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String Elemento = ingresaNombre.getText().toString();
+                if(Elemento==Elemento){
+                    mostrarElementos.setText("Elemento encontrado :"+Elemento);
+                    ingresaNombre.setText("");
+
+                }else{
+                    mostrarElementos.setText("");
+                }
+            }
+        });
 
 
 
@@ -211,11 +222,7 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
 
         }
 
-    }
-
-
-
-    private void registrarSeleccion(String seleccion){
+    }private void registrarSeleccion(String seleccion){
         Registro.put(seleccion," ");
         StringBuilder registroText=new StringBuilder("registro:\n");
 
@@ -226,6 +233,5 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
         }
         textspiner.setText(registroText.toString());
     }
-
 
 }

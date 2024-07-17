@@ -1,154 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login"
-    android:background="@color/white" >
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".login">
 
-        <FrameLayout
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imagen"
-                android:layout_width="match_parent"
-                android:layout_height="580dp"
-                app:srcCompat="@drawable/planet" />
-
-
-        </FrameLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout0"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="171dp"
-                android:layout_height="73dp"
-                android:layout_marginStart="105dp"
-                android:layout_marginTop="30dp"
-                app:srcCompat="@drawable/user" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout0">
-
-            <TextView
-                android:id="@+id/textIngresa"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:gravity="center"
-                android:text="Ingresa"
-                android:textColor="#121111"
-                android:textSize="45sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textIngresa2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="tus Credenciales"
-                android:textColor="#E9100101"
-                android:textSize="15sp" />
 
             <LinearLayout
-                android:id="@+id/linearLayout3"
+
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="35dp"
-                android:layout_marginBottom="15dp"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="55dp"
-                    android:layout_height="44dp"
-                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:srcCompat="@drawable/planet" />
 
-                <EditText
-                    android:id="@+id/editTUsuario"
+
+                <LinearLayout
+                    android:id="@+id/ok1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/textIngresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:text="Ingresa"
+                        android:textColor="#121111"
+                        android:textSize="45sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textIngresa2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="tus Credenciales"
+                        android:textColor="#E9100101"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="usuario"
-                    android:inputType="text"
-                    android:textSize="22dp" />
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/ok1"
+                    tools:layout_editor_absoluteX="35dp">
 
-            </LinearLayout>
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="55dp"
+                        android:layout_height="44dp"
+                        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="35dp"
-                android:layout_marginRight="35dp"
-                android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/editTUsuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="usuario"
+                        android:inputType="text"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
 
 
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="55dp"
-                    android:layout_height="44dp"
-                    app:srcCompat="@android:drawable/ic_lock_idle_lock" />
-
-                <EditText
-                    android:id="@+id/editTPassword"
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="35dp"
-                    android:ems="10"
-                    android:hint="contraseña"
-                    android:inputType="textPassword"
-                    android:textSize="22dp" />
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
 
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="55dp"
+                        android:layout_height="44dp"
+                        app:srcCompat="@android:drawable/ic_lock_idle_lock" />
+
+                    <EditText
+                        android:id="@+id/editTPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="35dp"
+                        android:ems="10"
+                        android:hint="contraseña"
+                        android:inputType="textPassword"
+                        android:textSize="22dp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+                    <Button
+                        android:id="@+id/buttonEntrar"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/drawer_borde"
+                        android:backgroundTint="#70A630"
+                        android:text="Entrar"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/textRegistrarse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Registrarse"
+                        android:textColor="#0E0E0E"
+                        android:textColorHint="#4CAF50"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
             </LinearLayout>
+        </ScrollView>
 
-            <Button
-                android:id="@+id/buttonEntrar"
-                android:layout_width="230dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:backgroundTint="#70A630"
-                android:background="@drawable/drawer_borde"
-                android:text="Entrar"
-                android:textSize="25sp" />
-            <TextView
-                android:id="@+id/textRegistrarse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Registrarse"
-                android:textColor="#0E0E0E"
-                android:textColorHint="#4CAF50"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+    </FrameLayout>
 
 
-        </LinearLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
