@@ -80,7 +80,7 @@ public class consejos_java extends AppCompatActivity {
         salir.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "salir", Toast.LENGTH_SHORT);
+                redirectActivity(consejos_java.this, login.class);
             }
 
         });

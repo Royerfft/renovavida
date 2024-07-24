@@ -154,8 +154,7 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
         salir.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "salir", Toast.LENGTH_SHORT);
-            }
+                redirectActivity(registro_java.this, login.class);            }
 
         });
 

@@ -14,9 +14,10 @@ import android.widget.Toast;
 public class login extends AppCompatActivity {
 
     private EditText user;
-    private EditText password;
+    private EditText contraseña;
     private Button logear;
     private TextView registrarse;
+    private UserManager userManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +25,10 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.pantalla_login);
 
         user=findViewById(R.id.editTUsuario);
-        password=findViewById(R.id.editTPassword);
+        contraseña=findViewById(R.id.editTPassword);
         logear=findViewById(R.id.buttonEntrar);
         registrarse=findViewById(R.id.textRegistrarse);
+        userManager = new UserManager(this);
 
 
         registrarse.setOnClickListener(new View.OnClickListener(){
@@ -41,15 +43,17 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (user.getText().toString().equals("")) {
-                    Toast.makeText(login.this, "es necesario tus credenciales para continuar", Toast.LENGTH_SHORT).show();
-                }else if (password.getText().toString().equals("")) {
-                    Toast.makeText(login.this, "Ingresa alguna contraseña", Toast.LENGTH_SHORT).show();
-                }else if (password.getText().toString().length()<6) {
-                    Toast.makeText(login.this, "La contrasela debe ser mayor a 6 caracteres", Toast.LENGTH_SHORT).show();
-                }else {
+                String email = user.getText().toString();
+                String password = contraseña.getText().toString();
+
+
+                if (userManager.loginUser(email,password)) {
                     Intent clik = new Intent(login.this, inicio_java.class);
                     startActivity(clik);
+                    finish();
+                }else {
+                    Toast.makeText(login.this,"email o password invalido",Toast.LENGTH_SHORT).show();
+
 
                 }
             }

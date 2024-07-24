@@ -97,7 +97,7 @@
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/edit"
+                            android:id="@+id/editNombre"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
@@ -120,7 +120,7 @@
 
 
                     <EditText
-                        android:id="@+id/editTUsu"
+                        android:id="@+id/editApellido"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -143,7 +143,7 @@
 
 
                     <EditText
-                        android:id="@+id/editTUs"
+                        android:id="@+id/editCorreo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -169,7 +169,7 @@
                         app:srcCompat="@android:drawable/ic_lock_idle_lock" />
 
                     <EditText
-                        android:id="@+id/editTPas"
+                        android:id="@+id/editPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="35dp"

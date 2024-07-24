@@ -77,7 +77,8 @@ public class inicio_java extends AppCompatActivity {
         salir.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "salir", Toast.LENGTH_SHORT);
+                redirectActivity(inicio_java.this, login.class);
+
             }
 
         });
