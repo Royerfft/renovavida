@@ -111,6 +111,7 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
             public void onClick(View view) {
                 Intent volver= new Intent(registro_java.this, siembra_registro_java.class);
                 startActivity(volver);
+                finish();
 
             }
         });
