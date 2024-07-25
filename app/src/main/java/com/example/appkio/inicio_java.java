@@ -86,8 +86,9 @@ public class inicio_java extends AppCompatActivity {
         ImagenesCardview.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(inicio_java.this, pantalla_intent_cardview.class);
-                startActivity(i);
+                Intent card = new Intent(inicio_java.this, pantalla_intent_cardview.class);
+                startActivity(card);
+                finish();
             }
         });
 

@@ -95,9 +95,8 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
         BotonTerreno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent terre= new Intent(registro_java.this, siembra_registro_java.class);
-                startActivity(terre);
-                finish();
+                Intent intent= new Intent(registro_java.this, siembra_registro_java.class);
+                startActivity(intent);
 
             }
         });
@@ -155,7 +154,7 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
             public void onClick(View view) {
                 String seleccion = spinner1.getSelectedItem().toString();
                 registrarSeleccion(seleccion);
-                finish();
+
 
             }
 
@@ -224,7 +223,9 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
 
         }
 
-    }private void registrarSeleccion(String seleccion){
+    }
+
+    private void registrarSeleccion(String seleccion){
         Registro.put(seleccion," ");
         StringBuilder registroText=new StringBuilder("registro:\n");
 

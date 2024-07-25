@@ -16,8 +16,8 @@ public class siembra_registro_java extends AppCompatActivity {
 
 
     private ImageView VolverRegistro;
-    private Spinner spinnerTipoArbol;
-    private TextView TextDescripcion;
+    //private Spinner spinnerTipoArbol;
+    //private TextView TextDescripcion;
 
 
 
@@ -29,14 +29,16 @@ public class siembra_registro_java extends AppCompatActivity {
 
 
         VolverRegistro=findViewById(R.id.img_volver);
-        TextDescripcion=findViewById(R.id.TextDescripcion);
-        spinnerTipoArbol=findViewById(R.id.spinnerTipoArbol);
+        //TextDescripcion=findViewById(R.id.TextDescripcion);
+        //spinnerTipoArbol=findViewById(R.id.spinnerTipoArbol);
 
         VolverRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent siguiente= new Intent(siembra_registro_java.this, inicio_java.class);
-                startActivity(siguiente);
+                Intent intent= new Intent(siembra_registro_java.this, inicio_java.class);
+                startActivity(intent);
+                recreate();
+
 
 
             }
