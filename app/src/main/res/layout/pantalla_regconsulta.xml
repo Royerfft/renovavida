@@ -41,279 +41,272 @@
 
 
         <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/imagenajuste"
             android:layout_width="match_parent"
-            android:layout_height="274dp"
-            android:layout_marginBottom="500dp"
-            app:srcCompat="@drawable/planta" />
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imagenajuste"
+                android:layout_width="match_parent"
+                android:layout_height="274dp"
+                android:layout_marginBottom="500dp"
+                app:srcCompat="@drawable/planta" />
 
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/color_degra2">
-
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="50dp"
-                android:fontFamily="casual"
-                android:text="Somos expertos en reforestacion.. !El tiempo es limitado!"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="19dp" />
-
-
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="180dp"
-                android:background="@drawable/dorde_boton"
-                android:orientation="horizontal">
+                android:background="@drawable/color_degra2">
 
-                <ScrollView
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="50dp"
+                    android:fontFamily="casual"
+                    android:text="Somos expertos en reforestacion.. !El tiempo es limitado!"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="19dp" />
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="180dp"
+                    android:background="@drawable/dorde_boton"
+                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-
-
-
-                            <Button
-                                android:id="@+id/BotonTerreno"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="170dp"
-                                android:drawableLeft="@drawable/baseline_menu_open_24"
-                                android:text="Tipo de Arbol"
-                                android:background="@color/verde_claro"
-                                android:textSize="20dp"
-
-                                />
-
-
-                        </LinearLayout>
-
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginStart="18dp"
-                                android:text="Seleciona el tipo de arbol"
-                                android:textColor="@color/verde_oscuro"
-                                android:textSize="20dp"
-                                android:textStyle="bold" />
-
-                            <Spinner
-                                android:id="@+id/spinnerTipoArbol"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:padding="15dp"
-                                android:textSize="22dp"
-                                android:visibility="visible"/>
-
-                            <ImageView
-                                android:id="@+id/ImagMapa1"
-                                android:layout_width="match_parent"
-                                android:layout_height="200dp"
-                                android:layout_marginTop="50dp"
-                                app:srcCompat="@drawable/forestar" />
-
-
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/TextDescripcion"
-                                android:layout_width="match_parent"
-                                android:layout_height="100dp"
-                                android:text="Descripcion a elegir !!tipo de Arbol!!"
-                                android:textAlignment="center"
-                                android:textColor="@color/verde_oscuro"
-                                android:textSize="18dp"
-                                android:layout_margin="20dp"
-                                android:textStyle="bold" />
-
-
-                            <EditText
-                                android:id="@+id/CantCompramap"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="16dp"
-                                android:ems="10"
-                                android:hint="Ingrese area ocupada  "
-                                android:inputType="number"
-                                android:textSize="22dp" />
 
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="20dp"
-                                android:orientation="horizontal"
-                                >
-
-                                <ImageView
-                                    android:layout_width="100dp"
-                                    android:layout_height="120dp"
-                                    app:srcCompat="@drawable/calcular1"
-                                    />
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical">
-
-                                <EditText
-                                    android:id="@+id/editTextCantidad"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:hint="Cantidad de plantas"
-                                    android:inputType="number"
-                                    android:layout_marginStart="10dp"
-                                    android:textSize="20dp"
-                                   />
-                                <EditText
-                                    android:id="@+id/editTextCosto"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:hint="Costo de planta"
-                                    android:inputType="number"
-                                    android:layout_marginStart="10dp"
-                                    android:textSize="22dp"
-                                    />
-                            </LinearLayout>
-
-
-
-
-                            </LinearLayout>
-
-
-
-                            <EditText
-                                android:id="@+id/editDioxido"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:textColor="@color/verde_oscuro"
-                                android:textSize="18dp"
-                                android:textStyle="bold"
-                                android:hint="Cantidad de dioxido absorbdopor dia"
-                                android:inputType="number"/>
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
                                 android:orientation="horizontal">
 
-                                <Button
-                                    android:id="@+id/buttonEntrarMap"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:backgroundTint="@color/verde_azul"
-                                    android:text="Agregar"
-                                    android:textSize="18sp" />
-
 
                                 <Button
-                                    android:id="@+id/buttonGuardar"
-                                    android:layout_width="match_parent"
+                                    android:id="@+id/BotonTerreno"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
+                                    android:layout_marginStart="170dp"
                                     android:layout_weight="1"
-                                    android:backgroundTint="@color/verde_azul"
-                                    android:text="Guardar"
-                                    android:textSize="18sp" />
+                                    android:background="@color/verde_claro"
+                                    android:drawableLeft="@drawable/baseline_menu_open_24"
+                                    android:text="Tipo de Arbol"
+                                    android:textSize="20dp"
+
+                                    />
+
 
                             </LinearLayout>
 
+
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
 
-                            <TextView
-                                android:id="@+id/MostrarTodoMap"
-                                android:layout_width="358dp"
-                                android:layout_height="135dp"
-                                android:layout_marginTop="50dp"
-                                android:backgroundTint="#7BFC68"
-                                android:hint="Registro....." />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="18dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="Seleciona el tipo de arbol"
+                                    android:textColor="@color/verde_oscuro"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <Spinner
+                                    android:id="@+id/spinnerTipoArbol"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp"
+                                    android:textSize="22dp"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/ImagMapa1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"
+                                    android:layout_marginTop="50dp"
+                                    app:srcCompat="@drawable/forestar" />
+
+
                             </LinearLayout>
+
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal">
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/TextDescripcion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_margin="20dp"
+                                    android:text="Descripcion a elegir !!tipo de Arbol!!"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/verde_oscuro"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
 
 
-                                <Button
-                                    android:id="@+id/buttonConsultar"
+                                <EditText
+                                    android:id="@+id/CantCompramap"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:backgroundTint="@color/verde_azul"
-                                    android:text="Consultar"
-                                    android:textSize="18sp" />
+                                    android:layout_margin="16dp"
+                                    android:ems="10"
+                                    android:hint="Ingrese area ocupada  "
+                                    android:inputType="number"
+                                    android:textSize="22dp" />
 
-                                <Button
-                                    android:id="@+id/buttonBorrar"
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:backgroundTint="@color/verde_azul"
-                                    android:text="Borrar"
-                                    android:textSize="18sp" />
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="120dp"
+                                        app:srcCompat="@drawable/calcular1" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <EditText
+                                            android:id="@+id/editTextCantidad"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:hint="Cantidad de plantas"
+                                            android:inputType="number"
+                                            android:textSize="20dp" />
+
+                                        <EditText
+                                            android:id="@+id/editTextCosto"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:hint="Costo de planta"
+                                            android:inputType="number"
+                                            android:textSize="22dp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+
+                                    <EditText
+                                        android:id="@+id/editDioxido"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Cantidad de dioxido perdido por dia"
+                                        android:inputType="number"
+                                        android:textColor="@color/verde_oscuro"
+                                        android:textSize="20dp"
+                                        android:textStyle="bold" />
+
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <Button
+                                                android:id="@+id/buttonEntrarMap"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="1"
+                                                android:backgroundTint="@color/verde_azul"
+                                                android:text="Agregar"
+                                                android:textSize="18sp" />
+
+
+                                            <Button
+                                                android:id="@+id/buttonGuardar"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="1"
+                                                android:backgroundTint="@color/verde_azul"
+                                                android:text="Guardar"
+                                                android:textSize="18sp" />
+
+                                        </LinearLayout>
+                                        <TextView
+                                            android:id="@+id/MostrarTodoMap"
+                                            android:layout_width="358dp"
+                                            android:layout_height="135dp"
+                                            android:backgroundTint="#7BFC68"
+                                            android:hint="Registro....." />
+
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+
+                                            <Button
+                                                android:id="@+id/buttonConsultar"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="1"
+                                                android:backgroundTint="@color/verde_azul"
+                                                android:text="Consultar"
+                                                android:textSize="18sp" />
+
+                                            <Button
+                                                android:id="@+id/buttonBorrar"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="1"
+                                                android:backgroundTint="@color/verde_azul"
+                                                android:text="Borrar"
+                                                android:textSize="18sp" />
+
+
+                                        </LinearLayout>
+                                </LinearLayout>
 
 
                             </LinearLayout>
 
 
                         </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
 
 
-                    </LinearLayout>
-                </ScrollView>
-
-            </LinearLayout>
-
-
-        </FrameLayout>
+            </FrameLayout>
         </FrameLayout>
     </LinearLayout>
 
