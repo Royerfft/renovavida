@@ -26,14 +26,14 @@ import java.util.HashMap;
 
 public class registro_java extends AppCompatActivity implements View.OnClickListener {
 
-    DrawerLayout drawerLayout;
-    ImageView menu;
-    LinearLayout inicio, ajuste, compartir, informacion, salir;
-    Button BotonFecha, BotonHora,RegistrarBoton,BotonTerreno;
-    EditText EditFecha, EditHora, Fecha, Hora, ingresaNombre;
+    private DrawerLayout drawerLayout;
+    private ImageView menu;
+    private LinearLayout inicio, ajuste, compartir, informacion, salir;
+    private Button BotonFecha, BotonHora,RegistrarBoton,BotonTerreno;
+    private EditText EditFecha, EditHora, Fecha, Hora, ingresaNombre;
     private int dia,mes,año,hora,minutos;
     private Spinner spinner1;
-    private TextView textspiner, mostrarElementos;
+    private TextView  mostrarElementos;
     private HashMap<String,String> Registro;
 
 
@@ -62,7 +62,6 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
 
         spinner1=findViewById(R.id.spinner);
         RegistrarBoton=findViewById(R.id.buttonEntrar);
-        textspiner=findViewById(R.id.MostrarTodo);
         Registro = new HashMap<>();
 
 
@@ -91,26 +90,13 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
 
 
 
-        ArrayAdapter<CharSequence> adapter =ArrayAdapter.createFromResource(this, R.array.spinner_cuidad, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapter);
-        //boton para registrar la seleccion
 
-        RegistrarBoton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String seleccion = spinner1.getSelectedItem().toString();
-                registrarSeleccion(seleccion);
-
-            }
-
-        });
 
         BotonTerreno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent volver= new Intent(registro_java.this, siembra_registro_java.class);
-                startActivity(volver);
+                Intent terre= new Intent(registro_java.this, siembra_registro_java.class);
+                startActivity(terre);
                 finish();
 
             }
@@ -156,6 +142,22 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
             @Override
             public void onClick(View view) {
                 redirectActivity(registro_java.this, login.class);            }
+
+        });
+
+        ArrayAdapter<CharSequence> adapter =ArrayAdapter.createFromResource(this, R.array.spinner_cuidad, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner1.setAdapter(adapter);
+        //boton para registrar la seleccion
+
+        RegistrarBoton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String seleccion = spinner1.getSelectedItem().toString();
+                registrarSeleccion(seleccion);
+                finish();
+
+            }
 
         });
 
@@ -231,7 +233,7 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
 
 
         }
-        textspiner.setText(registroText.toString());
+        mostrarElementos.setText(registroText.toString());
     }
 
 }

@@ -43,13 +43,13 @@
                         android:textSize="18dp" />
 
                     <Button
-                        android:id="@+id/BotonMimpacto"
+                        android:id="@+id/BotonMiconsulta"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
                         android:background="@drawable/color_degra2"
-                        android:text="Mi impacto"
+                        android:text="Consulta"
                         android:textSize="18dp"
 
                         />
