@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -29,8 +30,8 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
     private DrawerLayout drawerLayout;
     private ImageView menu;
     private LinearLayout inicio, ajuste, compartir, informacion, salir;
-    private Button BotonFecha, BotonHora,RegistrarBoton,BotonTerreno;
-    private EditText EditFecha, EditHora, Fecha, Hora, ingresaNombre;
+    private Button BotonFecha, BotonHora,RegistrarBoton,BotonTerreno,BotonCrearArboles;
+    private EditText EditFecha, EditHora, Fecha, Hora, ingresaNombre, editCantArea;
     private int dia,mes,año,hora,minutos;
     private Spinner spinner1;
     private TextView  mostrarElementos;
@@ -53,6 +54,8 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
         salir=findViewById(R.id.salir);
 
         ingresaNombre=findViewById(R.id.IngresaNombre);
+        editCantArea=findViewById(R.id.editCantArea);
+
         mostrarElementos=findViewById(R.id.MostrarTodo);
 
         BotonFecha=findViewById(R.id.buttonFecha);
@@ -73,26 +76,19 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
         Hora=findViewById(R.id.editTextHora);
 
         BotonTerreno=findViewById(R.id.BotonTerreno);
-
-        RegistrarBoton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String Elemento = ingresaNombre.getText().toString();
-                if(Elemento==Elemento){
-                    mostrarElementos.setText("Elemento encontrado :"+Elemento);
-                    ingresaNombre.setText("");
-
-                }else{
-                    mostrarElementos.setText("");
-                }
-            }
-        });
-
-
+        BotonCrearArboles=findViewById(R.id.buttonAgregarArboles);
 
 
 
         BotonTerreno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(registro_java.this, siembra_registro_java.class);
+                startActivity(intent);
+
+            }
+        });
+        BotonCrearArboles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(registro_java.this, siembra_registro_java.class);
@@ -149,7 +145,7 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
         spinner1.setAdapter(adapter);
         //boton para registrar la seleccion
 
-        RegistrarBoton.setOnClickListener(new View.OnClickListener() {
+        /*RegistrarBoton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String seleccion = spinner1.getSelectedItem().toString();
@@ -159,10 +155,46 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
             }
 
         });
+        */
+         RegistrarBoton.setOnClickListener(view -> GuardarPlantacion());
 
 
 
     }
+    private void GuardarPlantacion(){
+        String nombrePlantacion = ingresaNombre.getText().toString();
+        String AreaPlantacion=editCantArea.getText().toString();
+        String seleccion = spinner1.getSelectedItem().toString();
+        String fecha = EditFecha.getText().toString();
+        String hora = EditHora.getText().toString();
+        // el if es para validar que los campos no queden vacios
+
+        if (nombrePlantacion.isEmpty() || AreaPlantacion.isEmpty() || seleccion.isEmpty()){
+            Toast.makeText(this,"complete los campos",Toast.LENGTH_SHORT).show();
+            return;
+        }
+        // linea solo para guardar plntacion.. lo que se va hacer es buscar datos en sharepreferent
+        SharedPreferences preferences=getSharedPreferences("CrearPlantacion",MODE_PRIVATE);
+
+        //habilitar el editor para modificar las preferent
+        SharedPreferences.Editor editor = preferences.edit();
+        // que lo que se ingrese se posiciones y se incremente es decir se vaya validando y genrendo otra plantacion
+        int index = preferences.getInt("index",0);
+        editor.putString("nombre de la siembra o plantacion"+index,nombrePlantacion);
+        editor.putString("Area total de cultivo"+index,AreaPlantacion);
+        editor.putString("seleccion departamento"+index,seleccion);
+        editor.putString("fecha de plantacion"+index,fecha);
+        editor.putString("hora de plantacion"+index,hora);
+
+        //para registrar los datos tenemos que crear un contador
+        editor.putInt("index",index+1);
+        //aplicar los cambios
+        editor.apply();
+        registrarSeleccion(seleccion);
+        Toast.makeText(this, "Datos guardados", Toast.LENGTH_LONG).show();
+        //finish();
+    }
+
 
     public static void openDrawer(DrawerLayout drawerLayout){
         drawerLayout.openDrawer(GravityCompat.START);
@@ -227,14 +259,17 @@ public class registro_java extends AppCompatActivity implements View.OnClickList
 
     private void registrarSeleccion(String seleccion){
         Registro.put(seleccion," ");
-        StringBuilder registroText=new StringBuilder("registro:\n");
+        StringBuilder AgruparOpcion=new StringBuilder("Datos iniciales:\n");
 
         for(String key:Registro.keySet()){
-            registroText.append(key).append("").append(Registro.get(key)).append("\n");
+            AgruparOpcion.append("\n").append(ingresaNombre.getText()).append("\n").append(editCantArea.getText().toString()).append("\n").append(key).append(Registro.get(key)).append("\n").append(EditFecha.getText().toString()).append("\n").append(EditHora.getText().toString());
+
 
 
         }
-        mostrarElementos.setText(registroText.toString());
+        mostrarElementos.setText(AgruparOpcion.toString());
+
+
     }
 
 }
