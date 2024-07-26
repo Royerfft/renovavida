@@ -152,10 +152,10 @@
                                 <TextView
                                     android:id="@+id/TextDescripcion"
                                     android:layout_width="match_parent"
-                                    android:layout_height="100dp"
+                                    android:layout_height="200dp"
                                     android:layout_margin="20dp"
                                     android:text="Descripcion a elegir !!tipo de Arbol!!"
-                                    android:textAlignment="center"
+                                    android:textAlignment="textStart"
                                     android:textColor="@color/verde_oscuro"
                                     android:textSize="18dp"
                                     android:textStyle="bold" />

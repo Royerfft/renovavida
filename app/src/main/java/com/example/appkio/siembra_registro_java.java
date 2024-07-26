@@ -72,15 +72,15 @@ public class siembra_registro_java extends AppCompatActivity {
     private DescripcionArbol ObtenerDescripcionArbol(TipodeArbol problReforestar){
         switch (problReforestar){
             case ENCINA:
-                return new DescripcionArbol(problReforestar, "El Arbol ENCINA se caracteriza por tener una copa ancha que proyecta una gran sombra ademas presenta un tronco fuerte y ancho con corteza lisa y de color grisaceo cuandop es joven", "10 a 12 metros de altura");
+                return new DescripcionArbol(problReforestar, ": El Arbol ENCINA se caracteriza por tener una copa ancha que proyecta una gran sombra ademas presenta un tronco fuerte y ancho con corteza lisa y de color grisaceo cuandop es joven", "10 a 12 metros de altura");
             case TAMARIZ:
-                return new DescripcionArbol(problReforestar, "Arbusto con la corteza pardusca, agrietada y las ramas erectas pero flexible de color pardo rojizas o purpureas", "Arbusto de hasta 6 metros de altura");
+                return new DescripcionArbol(problReforestar, ": Arbusto con la corteza pardusca, agrietada y las ramas erectas pero flexible de color pardo rojizas o purpureas", "Arbusto de hasta 6 metros de altura");
             case ALAMO_BLANCO:
-                return new DescripcionArbol(problReforestar, "se trata de un arbol caducifolio de corteza blanco verdos o grisesacea y se agrieta longitudinalmente con la edad ", "Puede llegar a medir hasta 25 metros");
+                return new DescripcionArbol(problReforestar, ": Se trata de un arbol caducifolio de corteza blanco verdos o grisesacea y se agrieta longitudinalmente con la edad ", "Puede llegar a medir hasta 25 metros");
             case ENERBO:
-                return new DescripcionArbol(problReforestar, "jjfjfj", "jhfsfklsjdf");
+                return new DescripcionArbol(problReforestar, ": Arbusto muy ramificado con tendencia a echarse a veces erecto, corteza marron, fibrosa, exfoliandose en tiras delgadas ramillas de 5 a 10 milimetros", "Arvol de 4 a 10 metros de altura");
             case PINO_RESINERO:
-                return new DescripcionArbol(problReforestar, "jjfjfj", "jhfsfklsjdf");
+                return new DescripcionArbol(problReforestar, ": Arboles de tamaño medio su corteza es rojo anaranjada muy agrietada y sciculas en pares gruesas y largas de tono de verde azulado ", "Altura de 20 a 35 metros");
             default:
                 return null;
         }
